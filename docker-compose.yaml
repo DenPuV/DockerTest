@@ -2,10 +2,11 @@ version: '2.1'
 volumes:
     test:
 services:
-    test:
-        container_name: test
+    docker-test:
+        container_name: docker-test
         build:
             context: .
+        image: denpuv/docker-test:latest
         environment:
             - PORT=1234
             - INSTANCE_ID=1
